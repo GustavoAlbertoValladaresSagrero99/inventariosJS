@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de inventario -  Gustavo Alberto Valladares Sagrero</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="studentInfo">
+        <h1>Alumno: Gustavo Alberto Valladares Sagrero</h1>
+    </div>
+
+    <div class="task">
+        <p><span id="taskMensaje">{Mensaje}</span>:<span id="taskResultado">{Resultado}</span></p>
+    </div>
+    
+    <div class="mainContainer">
+        <!--Header-->
+        <div class="header">
+            <div class="header-title">
+                <p>Control de inventario</p>
+            </div>
+            <div class="header-addbtn">
+                <input type="number" min="0" name="" id="" placeholder="Indice">
+                <button type="button" id="btnAgregar" class="btn-rounded">+ Agregar producto</button>
+            </div>
+        </div>
+
+        <!--Actions-->
+        <form>
+            <label for="code">Codigo</label>
+            <input type="number" name="" id="code">
+            
+            <label for="name">Nombre</label>
+            <input type="text" name="" id="name">
+            
+            <label for="unit">Cantidad</label>
+            <input type="number" name="" id="unit">
+            <label for="cost">Precio</label>
+            <input type="number" name="" id="cost">
+        </form>
+        <div class="actions">
+            <div class="actions-input">
+                <input type="text" maxlength="10" name="" id="searchBar" placeholder="Codigo de producto...">
+            </div>
+            <div class="actions-btns">
+                <button type="button" class="btn-rounded" id="btnSearch">Buscar</button>
+                <button type="button" class="btn-rounded" id="btnDeleteByCode">Eliminar producto</button>
+            </div>
+        </div>
+
+        <!--Center-->
+        <div class="center">
+            <div class="center-top">
+                <div>
+                    <p>Elementos</p>
+                </div>
+                <div>
+                    <p><span id="registrados">0</span>/20</p>
+                </div>
+                <div>
+                    <Button type="button" class="btn-rounded">Listar</Button>
+                    <Button type="button" class="btn-rounded">Listar Inverso</Button>
+                </div>
+            </div>
+            <div class="center-middle">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Costo</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
